@@ -1,0 +1,30 @@
+{
+   "name": "wirecraft",
+   "version": "1.0.0",
+   "description": "",
+   "main": "webpack.common.js",
+   "scripts": {
+      "dev": "webpack --watch --config webpack.dev.js",
+      "build": "webpack --config webpack.prod.js"
+   },
+   "author": "Wirelab",
+   "license": "ISC",
+   "devDependencies": {
+      "@babel/core": "^7.2.2",
+      "@babel/preset-env": "^7.2.0",
+      "babel-loader": "^8.0.4",
+      "browser-sync": "^2.26.3",
+      "browser-sync-webpack-plugin": "^2.2.2",
+      "clean-webpack-plugin": "^1.0.0",
+      "copy-webpack-plugin": "^4.6.0",
+      "css-loader": "^2.0.1",
+      "gulp-connect-php": "^1.0.3",
+      "mini-css-extract-plugin": "^0.5.0",
+      "node-sass": "^4.11.0",
+      "sass-loader": "^7.1.0",
+      "style-loader": "^0.23.1",
+      "webpack": "^4.27.1",
+      "webpack-cli": "^3.1.2",
+      "webpack-merge": "^4.1.5"
+   }
+}
