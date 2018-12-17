@@ -6,11 +6,10 @@
 3. create database
    - `mysql -u [username]` (add `-p` if you have a password)
    - `create database [database-name];`
-4. create a storage folder and gitkeep file
-   - `mkdir storage && cd storage`
-   - `touch .gitkeep`
-5. run `./craft setup/index`
-6. run `composer update`
+4. run `./craft setup/index`
+5. run `composer update`
+6. copy the env file and fill this in
+   - `cp .env.example .env`
 7. run `npm run dev`
 8. Login to the back-end
    - Setup the homepage
