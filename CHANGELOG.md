@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3 - 2018-12-17
+### Changed
+- Added underscore to the master.twig file
+- Update readme, added info for env file
+
 ## 1.0.2 - 2018-12-17
 ### Changed
 - Can't have uppercases in `composer.json` so set to camel casing
