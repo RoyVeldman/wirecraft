@@ -3,4 +3,5 @@
 /vendor
 /node_modules/*
 /storage/*
+/web/cpresources/*
 .DS_Store
