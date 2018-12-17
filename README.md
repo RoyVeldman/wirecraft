@@ -4,7 +4,7 @@
 1. `composer create-project roy-veldman/wirecraft [projectname]`
 2. `cd` into the project
 3. create database
-   - `mysql -u [username]`
+   - `mysql -u [username]` (add `-p` if you have a password)
    - `create database [database-name];`
 4. run `./craft setup/index`
 5. run `composer update`
