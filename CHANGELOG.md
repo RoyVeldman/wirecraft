@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.5 - 2018-12-19
+### Changed
+- Updated composer.json
+
 ## 1.0.4 - 2018-12-19
 ### Added
 - Mixins to scss with standard responsive mixin
