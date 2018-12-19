@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 - 2018-12-19
+### Added
+- Mixins to scss with standard responsive mixin
+
 ## 1.0.3 - 2018-12-17
 ### Changed
 - Added underscore to the master.twig file
