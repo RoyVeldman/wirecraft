@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-      {% do view.registerCssFile("/assets/app.css") %}
+      {% do view.registerCssFile("/assets/app.css" | bustThatCache) %}
       
       {% hook "seo" %}
    </head>
@@ -15,6 +15,6 @@
       {% endblock %}
       
 
-      {% do view.registerJsFile("/assets/app.bundle.js") %}
+      {% do view.registerJsFile("/assets/app.bundle.js" | bustThatCache) %}
    </body>
 </html>
