@@ -62,6 +62,11 @@ class CacheBusterTwigExtension extends \Twig_Extension
      */
     public function bustThatCache($file = null)
     {
+        // If not in production always return random time-based number
+        if(CRAFT_ENVIRONMENT !== 'production') {
+            return $file . '?v=' . time();
+        }
+
         $packageJson = CRAFT_BASE_PATH . '/package.json';
 
         // Assert we have something to read the file from
