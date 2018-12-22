@@ -5,7 +5,7 @@
    "main": "webpack.common.js",
    "scripts": {
       "dev": "webpack --watch --config webpack.dev.js",
-      "build": "webpack --config webpack.prod.js"
+      "build": "npm version minor && webpack --config webpack.prod.js"
    },
    "author": "Wirelab",
    "license": "ISC",
