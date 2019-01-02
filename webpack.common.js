@@ -39,6 +39,18 @@ const configureCssLoader = () => {
    }
 }
 
+const configureFileLoader = () => {
+    return {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {},
+            }
+        ]
+    }
+}
+
 module.exports = {
    entry: {
       app: rootEntry
@@ -46,7 +58,8 @@ module.exports = {
    module: {
       rules: [
          configureBabelLoader(),
-         configureCssLoader()
+         configureCssLoader(),
+         configureFileLoader()
       ]
    },
    plugins: [
