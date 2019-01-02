@@ -6,8 +6,21 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
       {% do view.registerCssFile("/assets/app.css") %}
-      
-      {% hook "seo" %}
+
+
+       {# Set the alternate languages #}
+       {% set sites = craft.app.sites.getAllSites() %}
+
+       {% if sites | length > 1 %}
+           {% for site in sites %}
+               {% if site.id != currentSite.id %}
+                  <link rel="alternate" href="{{ site.baseUrl }}" hreflang="{{ site.language }}" />
+               {% endif %}
+           {% endfor %}
+       {% endif %}
+
+
+       {% hook "seo" %}
    </head>
    <body>
 
