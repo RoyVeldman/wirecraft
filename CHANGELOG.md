@@ -1,6 +1,13 @@
 # Changelog
 
-## 1.0.6 - 2018-12-19
+## 1.0.7 - 2019-01-10
+## Added
+- updated the date 1.0.6 version was released, to the correct date.
+- cache buster added to css and javascript files
+- alternate languages set in the `master.twig`
+- file loader added in `webpack.common.js` and in the `package.json` file
+
+## 1.0.6 - 2019-01-10
 ### Changed
 - Removed step 5 (cp .env file) from the README.md, because craft already makes this on install
 - Updated the steps in the README.md, added `npm install`

@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-      {% do view.registerCssFile("/assets/app.css") %}
+      {% do view.registerCssFile("/assets/app.css" | bustThatCache) %}
 
        {# Set the alternate languages #}
        {% set sites = craft.app.sites.getAllSites() %}
