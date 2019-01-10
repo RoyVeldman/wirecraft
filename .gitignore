@@ -2,6 +2,6 @@
 /.idea
 /vendor
 /node_modules/*
-/storage/*
+!storage/.keep
 /web/cpresources/*
 .DS_Store

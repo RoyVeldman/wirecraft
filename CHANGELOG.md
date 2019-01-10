@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.6 - 2018-12-19
+### Changed
+- Removed step 5 (cp .env file) from the README.md, because craft already makes this on install
+- Updated the steps in the README.md, added `npm install`
+- Updated the .gitignore so it pushes the storage folder but nothing inside it (to prevent error)
+- Added import for the mixins file in scss
+- Added semi columns at the end of the webpack functions
+
 ## 1.0.5 - 2018-12-19
 ### Changed
 - Updated composer.json
