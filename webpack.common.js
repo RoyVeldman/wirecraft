@@ -3,9 +3,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const rootEntry = './src/js/app.js'
-const cleanFiles = ['./web/assets/*.js', './web/assets/*.css', './web/assets/*.map']
-const assetOutput = path.resolve(__dirname, 'web/assets')
+const rootEntry = './src/js/app.js';
+const cleanFiles = ['./web/assets/*.js', './web/assets/*.css', './web/assets/*.map'];
+const assetOutput = path.resolve(__dirname, 'web/assets');
 
 const configureStaticFiles = [{
       context: './src/fonts',
@@ -17,7 +17,7 @@ const configureStaticFiles = [{
       from: '**/*',
       to: 'icons/'
    }
-]
+];
 
 const configureBabelLoader = () => {
    return {
@@ -30,14 +30,14 @@ const configureBabelLoader = () => {
          }
       }
    }
-}
+};
 
 const configureCssLoader = () => {
    return {
       test: /\.scss$/,
       use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
    }
-}
+};
 
 module.exports = {
    entry: {
@@ -61,4 +61,4 @@ module.exports = {
       filename: '[name].bundle.js',
       path: assetOutput
    }
-}
+};
