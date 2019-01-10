@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.8 - 2019-01-10
+## Added & Updated
+- added .gitkeep files to pages & components folder in scss, so it will be pushed to git.
+- updated `master.twig` to `_master.twig`
+- updated `README.md` with new instructions under the heading `Starting Instructions`
+
 ## 1.0.7 - 2019-01-10
 ## Added
 - updated the date 1.0.6 version was released, to the correct date.

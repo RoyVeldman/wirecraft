@@ -13,5 +13,18 @@
 8. Login to the back-end
    - Setup the homepage
    - Go to settings -> plugins, and install the plugins
+   
+## Starting instructions
+If you created a homepage on the back-end of craft, whether is a single page or a structure you can start with the code below.
+* Example of the filename `pages/_entry.twig`
 
+```twig
+{% extends 'layouts/_master' %}
+
+{% block content %}
+
+      {# content comes here #} 
+
+{% endblock %}
+```
 _By Roy Veldman_
