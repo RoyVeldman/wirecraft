@@ -7,7 +7,6 @@
 
       {% do view.registerCssFile("/assets/app.css") %}
 
-
        {# Set the alternate languages #}
        {% set sites = craft.app.sites.getAllSites() %}
 
@@ -19,7 +18,6 @@
            {% endfor %}
        {% endif %}
 
-
        {% hook "seo" %}
    </head>
    <body>
@@ -28,6 +26,6 @@
       {% endblock %}
       
 
-      {% do view.registerJsFile("/assets/app.bundle.js") %}
+      {% do view.registerJsFile("/assets/app.bundle.js" | bustThatCache) %}
    </body>
 </html>

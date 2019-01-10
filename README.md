@@ -8,8 +8,7 @@
    - `create database [database-name];`
 4. run `./craft setup/index`
 5. run `composer update`
-6. copy the env file and fill this in
-   - `cp .env.example .env`
+6. run `npm install`
 7. run `npm run dev`
 8. Login to the back-end
    - Setup the homepage

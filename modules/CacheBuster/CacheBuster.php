@@ -1,7 +1,8 @@
 <?php
-namespace modules;
+namespace modules\cachebuster;
 
 use Craft;
+use modules\cachebuster\twigextensions\CacheBusterTwigExtension;
 
 /**
  * Custom module class.
@@ -20,7 +21,7 @@ use Craft;
  * Learn more about Yii module development in Yii's documentation:
  * http://www.yiiframework.com/doc-2.0/guide-structure-modules.html
  */
-class Module extends \yii\base\Module
+class CacheBuster extends \yii\base\Module
 {
     /**
      * Initializes the module.
@@ -39,6 +40,11 @@ class Module extends \yii\base\Module
 
         parent::init();
 
-        // Custom initialization code goes here...
+        // Register Twig module for cache busting version
+        if (Craft::$app->request->getIsSiteRequest()) {
+            // Add in our Twig extension
+            $extension = new CacheBusterTwigExtension();
+            Craft::$app->view->registerTwigExtension($extension);
+        }
     }
 }

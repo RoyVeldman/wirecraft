@@ -16,7 +16,7 @@ const configureDevServer = function () {
       notify: false,
       files: ['./templates/**/*.twig']
    });
-}
+};
 
 module.exports = merge(common, {
    mode: 'development',
@@ -24,4 +24,4 @@ module.exports = merge(common, {
    plugins: [
       new configureDevServer()
    ]
-})
+});
