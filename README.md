@@ -14,6 +14,9 @@
    - Setup the homepage
    - Go to settings -> plugins, and install the plugins
    
+### Production build
+run `npm run build` if you are ready for production, this will minify the javascript and css files.
+   
 ## Starting instructions
 If you created a homepage on the back-end of craft, whether is a single page or a structure you can start with the code below.
 * Example of the filename `pages/_entry.twig`
@@ -27,4 +30,80 @@ If you created a homepage on the back-end of craft, whether is a single page or 
 
 {% endblock %}
 ```
+
+## Additional information
+#### Jquery
+* If you want to use Jquery on your project (which i don't recommend), follow the steps below
+* All these changes are in the `webpack.common.js`
+
+```javascript
+// At the top of the file add the webpack variable
+const webpack = require('webpack'); 
+
+// Inside the plugins add the following plugin, 
+// Add this below the CopyWebpackPlugin
+new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery'
+})
+```
+
+#### VueJS
+* If you want to use VueJS on your project, follow the steps below
+* All these changes are in the `webpack.common.js`
+
+```javascript
+// Add this a the top of the file
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
+// Add this function under the confiureCssLoader()
+const configureVueLoader = () => {
+   return {
+      test: /\.vue$/,
+      loader: 'vue-loader'
+   }
+}
+
+// in this module.exports, add the following code below the entry
+resolve: {
+  alias: {
+     'vue$': 'vue/dist/vue.esm.js'
+  },
+  extensions: ['*', '.js', '.vue', '.json']
+},
+
+// In the module.exports, add this to the module -> rules
+// Add this part under the configureCssLoader
+configureVueLoader()
+
+// Inside the plugins add the following plugin
+// Add this plugin between copyWebpackPlugin and above the miniCssExtractPlugin
+new VueLoaderPlugin(),
+```
+
+### Boilerplate information
+* Craft CMS (clean install)
+* Basic folder structure
+    * Src folder with JS and SCSS
+    * Starting files ( `app.scss` / `app.js` )
+    * Standard mobile mixin ( already includes in `app.scss` ) 
+    * Layout folder with `_master.twig` file, which contains basic layout file ( css and js includes aswell as seo plugin )
+* Craft Module
+    * Cache busting (gives the css and js files a version number)
+* Craft Plugins 
+    * Entry instructions
+    * Super table
+    * SEO
+    * Redactor
+* Webpack (for compiling css and js)
+    * ES6 functionality
+    * SCSS
+    * Babel
+    * Copying static assets ( standard fonts and icons )
+    * Minify CSS and JS on production
+    * Live server with hot reload
+    * File-loader
+    * Clean files plugin ( removes unused css and js files from assets folder )
+
+
 _By Roy Veldman_
