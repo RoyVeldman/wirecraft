@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0 - 2019-01-11
+## Added
+- The production build now minify both css and javascript files.
+- Added `npm run build` info to the `README.md` file
+- Added information how to add `Jquery` or `VueJs` to your project
+- Added information what is inside this boilerplate, at the bottom of the `README.md`
+
 ## 1.0.9 - 2019-01-11
 ## Added
 - added auto prefixer for css, using `postcss-loader` and added the `postcss.config.js` file
