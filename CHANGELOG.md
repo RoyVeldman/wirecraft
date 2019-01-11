@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.9 - 2019-01-11
+## Added
+- added auto prefixer for css, using `postcss-loader` and added the `postcss.config.js` file
+
 ## 1.0.8 - 2019-01-10
 ## Added & Updated
 - added .gitkeep files to pages & components folder in scss, so it will be pushed to git.
