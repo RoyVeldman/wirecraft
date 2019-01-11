@@ -100,7 +100,7 @@ new VueLoaderPlugin(),
     * SCSS
     * Babel
     * Copying static assets ( standard fonts and icons )
-    * Minify CSS and JS on production
+    * Minify CSS and JS on production ( prefix included! )
     * Live server with hot reload
     * File-loader
     * Clean files plugin ( removes unused css and js files from assets folder )
