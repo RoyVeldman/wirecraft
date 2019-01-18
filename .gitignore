@@ -3,5 +3,6 @@
 /vendor
 /node_modules/*
 !storage/.keep
-/web/cpresources/*
+/web/assets/uploads/*
+!web/assets/uploads/.gitkeep
 .DS_Store

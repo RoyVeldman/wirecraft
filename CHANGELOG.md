@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1 - 2019-01-18
+## Update
+- Craft updated to `3.1`
+- Created a uploads folder for files (this folder does not get pushed)
+
 ## 1.1.0 - 2019-01-11
 ## Added
 - The production build now minify both css and javascript files.
