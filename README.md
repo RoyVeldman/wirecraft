@@ -13,6 +13,9 @@
 8. Login to the back-end
    - Setup the homepage
    - Go to settings -> plugins, and install the plugins
+   - Create Assets in the uploads folder `@web/assets/uploads/{images}`
+   
+* Created an uploads folder for all the images and files you set-up in craft, this folder does not get pushed so you won't have any conflicts with local and production. The static images that are hardcoded or static icons are in the actual image or icons folder, these can be pushed.
    
 ### Production build
 run `npm run build` if you are ready for production, this will minify the javascript and css files.
@@ -100,7 +103,7 @@ new VueLoaderPlugin(),
     * SCSS
     * Babel
     * Copying static assets ( standard fonts and icons )
-    * Minify CSS and JS on production
+    * Minify CSS and JS on production ( prefix included! )
     * Live server with hot reload
     * File-loader
     * Clean files plugin ( removes unused css and js files from assets folder )
