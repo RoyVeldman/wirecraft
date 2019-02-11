@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.2 - 2019-02-04
+## Update
+- Updated packages
+- Added VueJS standard in the webpack
+- Updated `README.md`
+- Added ProjectConfig in the `general.php` file so database get's synced from local to acceptance and production.
+
 ## 1.1.1 - 2019-01-18
 ## Update
 - Craft updated to `3.1`

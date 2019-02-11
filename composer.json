@@ -1,13 +1,13 @@
 {
    "name": "roy-veldman/wirecraft",
    "description": "Standard Craft install for Wirelab projects",
-   "version": "1.1.1",
+   "version": "1.1.2",
   "require": {
-    "craftcms/cms": "3.1.1",
+    "craftcms/cms": "3.1.7",
     "vlucas/phpdotenv": "^2.4.0",
-    "ether/seo": "3.4.4",
-    "verbb/super-table": "2.0.14",
-    "craftcms/redactor": "2.1.7",
+    "ether/seo": "3.5.4",
+    "verbb/super-table": "2.1.6",
+    "craftcms/redactor": "2.3.1",
     "superbig/craft-entry-instructions": "1.0.4"
   },
   "autoload": {

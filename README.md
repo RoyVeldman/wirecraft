@@ -35,6 +35,22 @@ If you created a homepage on the back-end of craft, whether is a single page or 
 ```
 
 ## Additional information
+
+#### VueJS
+* VueJs is already standard in the boilerplate, if you want to make use of it, follow the following steps:
+* Inside app.js
+```
+import Vue from 'vue'
+
+new Vue({
+    el: [targetElement]
+});
+```
+* Inside JS folder
+    * create components folder
+    * create `.vue` files
+* In the `.vue` files you can also access the global variables from your scss files, if you want to add or change this go into `webpack.common.js` and configure the `configureCssLoader()`
+
 #### Jquery
 * If you want to use Jquery on your project (which i don't recommend), follow the steps below
 * All these changes are in the `webpack.common.js`
@@ -49,39 +65,6 @@ new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery'
 })
-```
-
-#### VueJS
-* If you want to use VueJS on your project, follow the steps below
-* All these changes are in the `webpack.common.js`
-
-```javascript
-// Add this a the top of the file
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-
-// Add this function under the confiureCssLoader()
-const configureVueLoader = () => {
-   return {
-      test: /\.vue$/,
-      loader: 'vue-loader'
-   }
-}
-
-// in this module.exports, add the following code below the entry
-resolve: {
-  alias: {
-     'vue$': 'vue/dist/vue.esm.js'
-  },
-  extensions: ['*', '.js', '.vue', '.json']
-},
-
-// In the module.exports, add this to the module -> rules
-// Add this part under the configureCssLoader
-configureVueLoader()
-
-// Inside the plugins add the following plugin
-// Add this plugin between copyWebpackPlugin and above the miniCssExtractPlugin
-new VueLoaderPlugin(),
 ```
 
 ### Boilerplate information
@@ -101,11 +84,12 @@ new VueLoaderPlugin(),
 * Webpack (for compiling css and js)
     * ES6 functionality
     * SCSS
+    * VueJS
+    * File-loader
     * Babel
     * Copying static assets ( standard fonts and icons )
     * Minify CSS and JS on production ( prefix included! )
     * Live server with hot reload
-    * File-loader
     * Clean files plugin ( removes unused css and js files from assets folder )
 
 
