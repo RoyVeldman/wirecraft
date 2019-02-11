@@ -23,6 +23,9 @@ return [
         // Control Panel trigger word
         'cpTrigger' => 'admin',
 
+        // Database get's synced
+        'useProjectConfigFile' => true,
+
         // The secure key Craft will use for hashing and encrypting data
         'securityKey' => getenv('SECURITY_KEY'),
     ],
