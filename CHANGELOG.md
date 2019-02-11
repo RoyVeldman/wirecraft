@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.3 - 2019-02-12
+## Added
+- Added author and license to `composer.json`
+
 ## 1.1.2 - 2019-02-04
 ## Update
 - Updated packages
