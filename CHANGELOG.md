@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.4 - 2019-02-13
+## Fixes
+- VueJS, webpack resolve fix
+
 ## 1.1.3 - 2019-02-12
 ## Added
 - Added author and license to `composer.json`
