@@ -1,4 +1,4 @@
-# Wirelab Default Craft Installation
+# Boilerplate for Craft CMS
 
 ## Build instructions
 1. `composer create-project roy-veldman/wirecraft [projectname]`
