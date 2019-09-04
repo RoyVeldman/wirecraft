@@ -1,7 +1,7 @@
 {
    "name": "roy-veldman/wirecraft",
    "description": "Boilerplate for Craft CMS project, which include webpack and a basic structure",
-   "version": "1.1.5",
+   "version": "1.1.8",
   "authors": [
     {
       "name": "Roy Veldman",
