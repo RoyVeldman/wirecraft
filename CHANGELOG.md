@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.9 - 2019-09-24
+## Update
+- Updated packages in composer.json
+- Added Eslint 
+## Bug Fix
+- CleanWebpackPlugin fix
 ## 1.1.4 - 2019-02-13
 ## Fixes
 - VueJS, webpack resolve fix

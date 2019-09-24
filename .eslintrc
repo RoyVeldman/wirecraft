@@ -1,0 +1,38 @@
+{
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "extends": [
+    "airbnb",
+    "plugin:vue/recommended"
+  ],
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "react": {
+      "version": "999.999.999"
+    }
+  },
+  "rules": {
+    "max-len": ["error", {
+      "code": 120
+    }],
+    "vue/html-closing-bracket-newline": ["error", {
+      "multiline": "never"
+    }],
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "normal": "never"
+      }
+    }],
+    "class-methods-use-this": ["off"],
+    "no-use-before-define": ["error", {
+      "functions":  false
+    }],
+    "no-unused-expressions": ["error", {
+      "allowTernary": true
+    }]
+  }
+}
